@@ -184,4 +184,47 @@ header {
         display: flex;
     }
 }
+/* About Page */
+.about-page {
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.photo-item {
+    text-align: center;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
 
