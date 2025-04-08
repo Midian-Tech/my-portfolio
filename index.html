@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home | Misheck Onduso</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
+
     <header>
-        <nav>
-            
-                <li><a href="index.html">Home</a></li>
+        <nav class="navbar">
+            <div class="logo">Misheck Onduso</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Projects.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            
+            </ul>
         </nav>
     </header>
 
-    <section id="home">
+    <section id="home" class="hero-section">
         <div class="home-content">
             <div class="text-content">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Hello, I'm Nyamwaro Misheck Onduso, a passionate Computer scientist.</p>
-                <p>Explore my projects, skills, and more.</p>
-                <button onclick="window.location.href='About.html'">Learn More</button>
+                <h1>Hello, I'm <span>Misheck Onduso</span></h1>
+                <p>A passionate <strong>Computer Scientist</strong> with a love for innovation and problem-solving.</p>
+                <p>Dive into my world of code, creativity, and continuous learning.</p>
+                <button class="cta-btn" onclick="window.location.href='About.html'">Learn More</button>
             </div>
             <div class="image-content">
-                <img src="onduso.JPG" alt="Your Photo" id="profile-photo">
+                <img src="onduso.JPG" alt="Misheck Onduso" id="profile-photo" />
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <p>&copy; 2024 Misheck Onduso. All Rights Reserved.</p>
-    </footer>
-    <footer class="designer-footer">
         <p>Designed by <strong>Midian Tech Ltd.</strong></p>
     </footer>
 
