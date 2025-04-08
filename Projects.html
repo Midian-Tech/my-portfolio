@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Projects | Misheck Onduso</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Projects | Misheck Onduso</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
-    <header>
-        <nav>
-            
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            
-        </nav>
-    </header>
 
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Misheck Onduso</div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="projects-page">
     <section id="projects">
-        <h2>My Projects</h2>
+      <h2>My Projects</h2>
+      <div class="project-grid">
         <div class="project-card">
-            <h3>Project Title 1</h3>
-            <p>Description of the project...</p>
-            <a href="#">View Project</a>
+          <h3>AI Campus Navigator</h3>
+          <p>A web-based system that helps Kisii University students locate lecture halls, check class schedules, and receive alerts using AI.</p>
+          <a href="#">View Project</a>
         </div>
         <div class="project-card">
-            <h3>Project Title 2</h3>
-            <p>Description of the project...</p>
-            <a href="#">View Project</a>
+          <h3>Graphic Design Showcase</h3>
+          <p>A collection of digital posters, banners, and social media creatives crafted using Adobe Photoshop.</p>
+          <a href="#">View Project</a>
         </div>
-        <!-- Add more project cards as needed -->
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>This responsive personal portfolio showcases my projects, skills, and background in a clean UI.</p>
+          <a href="#">View Project</a>
+        </div>
+        <!-- Add more project cards if needed -->
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 Misheck Onduso. All Rights Reserved.</p>
-    </footer>
-    <footer class="designer-footer">
-        <p>Designed by <strong>Midian Tech Ltd.</strong></p>
-    </footer>
+  <footer class="main-footer">
+    <p>&copy; 2024 Misheck Onduso. All Rights Reserved.</p>
+    <p>Designed by <strong>Midian Tech Ltd.</strong></p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
