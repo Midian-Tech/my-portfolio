@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Misheck Onduso</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header> <nav>
-        
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Misheck Onduso</div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
-        <h1>Contact Me</h1>
-    </header>
+  </header>
 
+  <main class="contact-page">
     <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>If you have any questions or would like to collaborate, feel free to reach out to me through any of the following options:</p>
+      <h2>Get in Touch</h2>
+      <p>If you have any questions or would like to collaborate, feel free to reach out to me through any of the following options:</p>
 
-        <!-- WhatsApp Contact Link -->
-        <a href="https://wa.me/254716769354" target="_blank" class="contact-btn whatsapp">
-            <img src="logo1.png" alt="WhatsApp"> Contact via WhatsApp
-        </a>
+      <!-- WhatsApp Contact Link -->
+      <a href="https://wa.me/254716769354" target="_blank" class="contact-btn whatsapp">
+        <img src="logo1.png" alt="WhatsApp" /> Contact via WhatsApp
+      </a>
 
-        <!-- Email Contact Link -->
-        <a href="mailto:m2547643@gmail.com" class="contact-btn email">
-            <img src="logo2.png" alt="Email"> Send me an Email
-        </a>
+      <!-- Email Contact Link -->
+      <a href="mailto:m2547643@gmail.com" class="contact-btn email">
+        <img src="logo2.png" alt="Email" /> Send me an Email
+      </a>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 Misheck Onduso. All rights reserved.</p>
-    </footer>
-    <footer class="designer-footer">
-        <p>Designed by <strong>Midian Tech Ltd.</strong></p>
-    </footer>
+  <footer class="main-footer">
+    <p>&copy; 2024 Misheck Onduso. All Rights Reserved.</p>
+    <p>Designed by <strong>Midian Tech Ltd.</strong></p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
+
