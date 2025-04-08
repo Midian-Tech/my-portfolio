@@ -1,0 +1,155 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #003366;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #1e90ff;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #e8f0ff, #ffffff);
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 550px;
+    margin-right: 40px;
+}
+
+.text-content h1 {
+    font-size: 2.8rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.text-content h1 span {
+    color: #1e90ff;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Image Content */
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+#profile-photo {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 20px 10px;
+    font-size: 0.95rem;
+}
+
+.main-footer strong {
+    color: #1e90ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .text-content,
+    .image-content {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
