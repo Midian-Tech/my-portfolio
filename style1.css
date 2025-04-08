@@ -226,5 +226,34 @@ header {
     margin-top: 0.5rem;
     font-size: 0.95rem;
 }
+/* Skills Page */
+.skills-page {
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: auto;
+}
+
+.skills-list li {
+    background-color: #f3f3f3;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 
 
