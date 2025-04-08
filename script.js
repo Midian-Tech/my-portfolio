@@ -2,6 +2,28 @@
 window.addEventListener("load", function () {
     // Add 'loaded' class to body to hide the preloader
     document.body.classList.add('loaded');
+
+    // Hide the preloader when the page is loaded
+    const loader = document.getElementById('loader'); // Assuming your loader has an id of "loader"
+    if (loader) {
+        loader.style.display = 'none'; // Hide the preloader
+    }
+
+    // Initialize the typing animation
+    new Typed("#typed-text", {
+        strings: [
+            "Welcome to My Portfolio",
+            "I am Misheck Onduso",
+            "A Passionate Computer Scientist",
+            "Web Developer | Graphic Designer | ML Enthusiast",
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|",
+    });
 });
 
 // Smooth Scroll for internal links (anchors)
@@ -89,14 +111,4 @@ inputs.forEach(input => {
             this.classList.remove('error');
         }
     });
-});
-
-// Preloader Functionality
-// Hide the preloader when the page is loaded
-window.addEventListener("load", function () {
-    // Select the loader
-    const loader = document.getElementById('loader'); // Assuming your loader has an id of "loader"
-    if (loader) {
-        loader.style.display = 'none'; // Hide the preloader
-    }
 });
