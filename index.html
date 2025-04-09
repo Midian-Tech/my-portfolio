@@ -18,6 +18,22 @@
                 transform: translateY(-15px); /* Move the button up by 15px */
             }
         }
+        @keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0px rgba(0, 123, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 0px rgba(0, 123, 255, 0.6);
+    }
+}
+
+#profile-photo {
+    animation: pulse-glow 2.5s infinite;
+}
+
 
         #cta-button {
             animation: bounce 1s infinite; /* Apply the bounce animation with a 1-second duration and infinite loop */
