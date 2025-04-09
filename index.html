@@ -13,9 +13,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">Misheck Onduso</div>
-            <div class="hamburger" id="hamburger">
-                &#9776;
-            </div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="About.html">About</a></li>
@@ -29,27 +27,14 @@
     <section id="home" class="hero-section">
         <div class="home-content">
             <div class="text-content">
-  <h1><span id="typed-text"></span></h1>
-                <section id="home" class="hero-section">
-    <div class="home-content">
-        <div class="text-content">
-            <h1><span id="typed-text"></span></h1>
-            <p>Explore my projects, skills, and more.</p>
-            <button id="cta-button">Click Me for a Surprise</button>
-            <div id="message-container"></div> <!-- Container to hold the message -->
-        </div>
-        <div class="image-content">
-            <img src="onduso.JPG" alt="Misheck Onduso" id="profile-photo" />
-        </div>
-    </div>
-</section>
-
-  
-  <p>Explore my projects, skills, and more.</p>
-  <button onclick="window.location.href='About.html'">Learn More</button>
-</div>
-
-          
+                <h1>Welcome to My Portfolio</h1>
+                <p>Explore my projects, skills, and more.</p>
+                <button id="cta-button">Click Me for a Surprise</button>
+                <div id="message-container"></div> <!-- Container to hold the message -->
+            </div>
+            <div class="image-content">
+                <img src="onduso.JPG" alt="Misheck Onduso" id="profile-photo" />
+            </div>
         </div>
     </section>
 
@@ -57,8 +42,6 @@
         <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
         <p>Designed by <strong>Midian Tech Ltd.</strong></p>
     </footer>
-
-
 
     <script>
         // Toggle hamburger menu
@@ -68,9 +51,16 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('show');
         });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
 
+        // Surprise message on button click
+        const ctaButton = document.getElementById('cta-button');
+        const messageContainer = document.getElementById('message-container');
+
+        ctaButton.addEventListener('click', () => {
+            messageContainer.innerHTML = "<p>Thank you for visiting my portfolio! I'm passionate about building amazing projects. Let's connect!</p>";
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
