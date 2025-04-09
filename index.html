@@ -7,6 +7,33 @@
     <title>Home | Misheck Onduso</title>
     <link rel="stylesheet" href="style1.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+    <style>
+        /* Bounce Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px); /* Move the button up by 15px */
+            }
+        }
+
+        #cta-button {
+            animation: bounce 1s infinite; /* Apply the bounce animation with a 1-second duration and infinite loop */
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cta-button:hover {
+            background-color: #0056b3; /* Change color when hovered */
+        }
+    </style>
 </head>
 <body>
 
@@ -72,5 +99,6 @@
             }
         });
     </script>
+
 </body>
 </html>
