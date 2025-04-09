@@ -371,6 +371,45 @@ header {
   font-weight: bold;
   color: #0e76a8; /* Choose a theme color */
 }
+/* Mobile responsive styling for the profile photo */
+#profile-photo {
+    width: 100%; /* Make the image take up the full width of the container */
+    max-width: 250px; /* Limit the max size of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to the image */
+    object-fit: cover; /* Ensure the image covers the available space */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* On hover, scale the profile photo slightly */
+#profile-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Adjust layout for mobile view (screens smaller than 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        text-align: center; /* Center the text content */
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-content {
+        margin-top: 20px; /* Add some space between the text and the image */
+    }
+
+    #profile-photo {
+        width: 80%; /* Image takes up 80% of the screen width */
+        max-width: 200px; /* Limit the max size */
+    }
+}
 
 
 
