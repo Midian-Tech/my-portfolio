@@ -8,61 +8,36 @@
   <link rel="stylesheet" href="style1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
-    /* Hamburger Menu styles */
+    .about-intro {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .about-image {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
+      .about-intro {
         flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 1rem;
-        z-index: 1000;
+        align-items: center;
+        text-align: center;
       }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .hamburger {
-        font-size: 30px;
-        cursor: pointer;
-      }
-    }
-
-    /* General navbar styling */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      padding: 1rem;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.5rem;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .nav-links li {
-      margin-left: 20px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .nav-links a.active {
-      color: #f39c12;
     }
   </style>
 </head>
@@ -71,9 +46,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">Misheck Onduso</div>
-      <div class="hamburger" id="hamburger">
-        &#9776;
-      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="About.html" class="active">About</a></li>
@@ -86,14 +59,15 @@
 
   <main class="about-page">
     <section class="about-intro">
-      <h2>About Me</h2>
-      <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning. With a constant drive for learning and growth, I strive to push my limits and bring innovative ideas to life. I thrive in environments that foster creativity and collaboration.</p>
-      <p>Over the years, I’ve honed my skills in web development and graphic design, applying them to solve real-world problems. I enjoy designing posters, conducting deep research, and participating in voluntary work to stay grounded and inspired.</p>
-      <p><strong>My goal is to become a technocrat.</strong></p>
-    </section>
-
-    <section class="about-image">
-      <img src="me.jpg" alt="Me" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning. I’m always curious, always learning, and always looking to build solutions that matter.</p>
+        <p>With a creative mind and a love for innovation, I strive to merge technology with real-world impact. My professional journey has been filled with problem-solving, teamwork, and continuous growth.</p>
+        <p><strong>My mission: To become a technocrat who transforms ideas into impactful digital experiences.</strong></p>
+      </div>
+      <div class="about-image">
+        <img src="me.jpg" alt="Photo of Misheck Onduso">
+      </div>
     </section>
 
     <section class="core-values">
@@ -129,7 +103,6 @@
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
 
-  <!-- Hamburger Menu Script -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -137,6 +110,6 @@
       navLinks.classList.toggle('show');
     });
   </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
