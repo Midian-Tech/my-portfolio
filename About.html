@@ -7,6 +7,10 @@
   <title>About Me | Misheck Onduso</title>
   <link rel="stylesheet" href="style1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation Library CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
   <style>
     .about-intro {
       display: flex;
@@ -58,19 +62,19 @@
   </header>
 
   <main class="about-page">
-    <section class="about-intro">
+    <section class="about-intro" data-aos="fade-up">
       <div class="about-text">
         <h2>About Me</h2>
         <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning. I’m always curious, always learning, and always looking to build solutions that matter.</p>
         <p>With a creative mind and a love for innovation, I strive to merge technology with real-world impact. My professional journey has been filled with problem-solving, teamwork, and continuous growth.</p>
         <p><strong>My mission: To become a technocrat who transforms ideas into impactful digital experiences.</strong></p>
       </div>
-      <div class="about-image">
+      <div class="about-image" data-aos="zoom-in">
         <img src="me.jpg" alt="Photo of Misheck Onduso">
       </div>
     </section>
 
-    <section class="core-values">
+    <section class="core-values" data-aos="fade-right">
       <h2>Core Values</h2>
       <ul>
         <li><strong>Creativity:</strong> I love building fresh, original concepts that solve problems effectively.</li>
@@ -80,13 +84,13 @@
       </ul>
     </section>
 
-    <section class="my-journey">
+    <section class="my-journey" data-aos="fade-left">
       <h2>My Journey So Far</h2>
       <p>My tech journey started with curiosity and a passion for design. Since then, I’ve worked on various projects—from simple websites to AI-powered systems. I enjoy solving challenges, whether through elegant design or smart code.</p>
       <p>I’m currently sharpening my skills in full-stack development and diving deeper into machine learning.</p>
     </section>
 
-    <section class="hobbies">
+    <section class="hobbies" data-aos="fade-up">
       <h2>What I Love Doing</h2>
       <ul>
         <li>Designing posters and branding assets</li>
@@ -98,11 +102,12 @@
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer" data-aos="fade-up">
     <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
 
+  <!-- Hamburger script -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -110,7 +115,16 @@
       navLinks.classList.toggle('show');
     });
   </script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true      // animation happens only once
+    });
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
-
