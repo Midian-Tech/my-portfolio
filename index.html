@@ -57,24 +57,24 @@
     animation: float-ring 4s ease-in-out infinite;
 }
 
+.profile-wrapper {
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px; /* Rounded rectangle */
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 #profile-photo {
     display: block;
-    border-radius: 15px; /* Match or slightly smaller than container */
     width: 300px;
     height: auto;
+    border-radius: 20px; /* Rounded rectangle shape */
     object-fit: cover;
     border: none;
 }
 
-/* Subtle float animation (optional) */
-@keyframes float-ring {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
+
 
 
 
@@ -103,9 +103,10 @@
                 <button id="cta-button">Click Me for a Surprise</button>
                 <div id="message-container" style="display: none;"></div> <!-- Container to hold the message -->
             </div>
-            <div class="gradient-ring-rect">
+           <div class="profile-wrapper">
     <img src="onduso.JPG" alt="Misheck Onduso" id="profile-photo" />
 </div>
+
 
 
         </div>
