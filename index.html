@@ -48,23 +48,34 @@
     animation: rotate-ring 6s linear infinite;
 }
 
-#profile-photo {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white; /* Inner white border for contrast */
+.gradient-ring-rect {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 20px; /* Rounded rectangle corners */
+    background: linear-gradient(135deg, #00bfff, #00ffcc, #ff00cc);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: float-ring 4s ease-in-out infinite;
 }
 
-/* Optional spinning animation */
-@keyframes rotate-ring {
-    0% {
-        transform: rotate(0deg);
+#profile-photo {
+    display: block;
+    border-radius: 15px; /* Match or slightly smaller than container */
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: none;
+}
+
+/* Subtle float animation (optional) */
+@keyframes float-ring {
+    0%, 100% {
+        transform: translateY(0px);
     }
-    100% {
-        transform: rotate(360deg);
+    50% {
+        transform: translateY(-5px);
     }
 }
+
 
 
     </style>
@@ -92,9 +103,10 @@
                 <button id="cta-button">Click Me for a Surprise</button>
                 <div id="message-container" style="display: none;"></div> <!-- Container to hold the message -->
             </div>
-            <div class="gradient-ring">
+            <div class="gradient-ring-rect">
     <img src="onduso.JPG" alt="Misheck Onduso" id="profile-photo" />
 </div>
+
 
         </div>
     </section>
