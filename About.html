@@ -19,7 +19,7 @@
       transform: translateY(0);
     }
 
-
+    /* Hamburger Menu styles */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -37,8 +37,45 @@
         display: flex;
       }
 
-     
+      .hamburger {
+        font-size: 30px;
+        cursor: pointer;
+      }
     }
+
+    /* General navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 1rem;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a.active {
+      color: #f39c12;
+    }
+
   </style>
 </head>
 <body>
