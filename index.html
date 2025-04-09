@@ -62,5 +62,25 @@
     </script>
 
     <script src="script.js"></script>
+      <script>
+        window.addEventListener("load", function () {
+            // Add event listener to CTA button
+            const ctaButton = document.getElementById('cta-button');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', function () {
+                    console.log("CTA Button clicked!");  // Debugging
+                    const messageContainer = document.getElementById('message-container');
+                    if (messageContainer) {
+                        messageContainer.style.display = 'block'; // Show the message
+                        messageContainer.innerHTML = '🎉 Surprise! Here is your surprise message! 🎉'; // Display surprise message
+                    } else {
+                        console.log("Message container not found!");  // Debugging
+                    }
+                });
+            } else {
+                console.log("CTA Button not found!");  // Debugging
+            }
+        });
+    </script>
 </body>
 </html>
