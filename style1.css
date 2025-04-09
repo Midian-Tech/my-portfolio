@@ -376,7 +376,7 @@ header {
     width: 100%; /* Make the image take up the full width of the container */
     max-width: 250px; /* Limit the max size of the image */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make the image round */
+    border-radius: 0; /* Make the image round */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to the image */
     object-fit: cover; /* Ensure the image covers the available space */
     transition: transform 0.3s ease; /* Smooth transition on hover */
