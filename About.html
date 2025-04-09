@@ -8,17 +8,6 @@
   <link rel="stylesheet" href="style1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
-    /* Fade In Up Animation */
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     /* Hamburger Menu styles */
     @media (max-width: 768px) {
       .nav-links {
@@ -75,7 +64,6 @@
     .nav-links a.active {
       color: #f39c12;
     }
-
   </style>
 </head>
 <body>
@@ -83,7 +71,9 @@
   <header>
     <nav class="navbar">
       <div class="logo">Misheck Onduso</div>
-      <div class="hamburger" id="hamburger">&#9776;</div>
+      <div class="hamburger" id="hamburger">
+        &#9776;
+      </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="About.html" class="active">About</a></li>
@@ -95,18 +85,18 @@
   </header>
 
   <main class="about-page">
-    <section class="about-intro fade-in-up">
+    <section class="about-intro">
       <h2>About Me</h2>
       <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning. With a constant drive for learning and growth, I strive to push my limits and bring innovative ideas to life. I thrive in environments that foster creativity and collaboration.</p>
       <p>Over the years, I’ve honed my skills in web development and graphic design, applying them to solve real-world problems. I enjoy designing posters, conducting deep research, and participating in voluntary work to stay grounded and inspired.</p>
       <p><strong>My goal is to become a technocrat.</strong></p>
     </section>
 
-    <section class="about-image fade-in-up" style="text-align: center;">
+    <section class="about-image">
       <img src="me.jpg" alt="Me" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
     </section>
 
-    <section class="core-values fade-in-up">
+    <section class="core-values">
       <h2>Core Values</h2>
       <ul>
         <li><strong>Creativity:</strong> I love building fresh, original concepts that solve problems effectively.</li>
@@ -116,13 +106,13 @@
       </ul>
     </section>
 
-    <section class="my-journey fade-in-up">
+    <section class="my-journey">
       <h2>My Journey So Far</h2>
       <p>My tech journey started with curiosity and a passion for design. Since then, I’ve worked on various projects—from simple websites to AI-powered systems. I enjoy solving challenges, whether through elegant design or smart code.</p>
       <p>I’m currently sharpening my skills in full-stack development and diving deeper into machine learning.</p>
     </section>
 
-    <section class="hobbies fade-in-up">
+    <section class="hobbies">
       <h2>What I Love Doing</h2>
       <ul>
         <li>Designing posters and branding assets</li>
@@ -134,7 +124,7 @@
     </section>
   </main>
 
-  <footer class="main-footer fade-in-up">
+  <footer class="main-footer">
     <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
@@ -148,21 +138,5 @@
     });
   </script>
 
-  <!-- Fade In On Scroll Script -->
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in-up').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
