@@ -119,26 +119,18 @@
     });
   </script>
 
-  <!-- Fade In / Out on Scroll -->
+  <!-- Fade In On Scroll Script -->
   <script>
-    const fadeEls = document.querySelectorAll('.fade-in-up');
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', () => {
-      let currentScroll = window.pageYOffset;
-
-      fadeEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const inView = rect.top < window.innerHeight && rect.bottom > 0;
-
-        if (inView && currentScroll > lastScrollTop) {
-          el.classList.add('visible');
-        } else if (currentScroll < lastScrollTop) {
-          el.classList.remove('visible');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
       });
+    }, { threshold: 0.1 });
 
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+      observer.observe(el);
     });
   </script>
 
