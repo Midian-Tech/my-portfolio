@@ -8,16 +8,21 @@
   <link rel="stylesheet" href="style1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 
-  <!-- AOS Animation Library CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
     .about-intro {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 2rem;
       flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      gap: 2rem;
     }
 
     .about-text {
@@ -32,14 +37,85 @@
 
     .about-image img {
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .core-values, .my-journey, .hobbies {
+      padding: 2rem;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .main-footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #333;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #333;
+      color: white;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links li a.active {
+      border-bottom: 2px solid #fff;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 768px) {
+      .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+        width: 200px;
+      }
+
+      .navbar .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
       .about-intro {
         flex-direction: column;
-        align-items: center;
         text-align: center;
       }
     }
@@ -62,19 +138,20 @@
   </header>
 
   <main class="about-page">
-    <section class="about-intro" data-aos="fade-up">
+
+    <section class="about-intro fade-in-up">
       <div class="about-text">
         <h2>About Me</h2>
-        <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning. I’m always curious, always learning, and always looking to build solutions that matter.</p>
-        <p>With a creative mind and a love for innovation, I strive to merge technology with real-world impact. My professional journey has been filled with problem-solving, teamwork, and continuous growth.</p>
+        <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning.</p>
+        <p>I’m always curious, always learning, and always looking to build solutions that matter. With a creative mind and a love for innovation, I strive to merge technology with real-world impact.</p>
         <p><strong>My mission: To become a technocrat who transforms ideas into impactful digital experiences.</strong></p>
       </div>
-      <div class="about-image" data-aos="zoom-in">
+      <div class="about-image fade-in-up">
         <img src="me.jpg" alt="Photo of Misheck Onduso">
       </div>
     </section>
 
-    <section class="core-values" data-aos="fade-right">
+    <section class="core-values fade-in-up">
       <h2>Core Values</h2>
       <ul>
         <li><strong>Creativity:</strong> I love building fresh, original concepts that solve problems effectively.</li>
@@ -84,13 +161,13 @@
       </ul>
     </section>
 
-    <section class="my-journey" data-aos="fade-left">
+    <section class="my-journey fade-in-up">
       <h2>My Journey So Far</h2>
       <p>My tech journey started with curiosity and a passion for design. Since then, I’ve worked on various projects—from simple websites to AI-powered systems. I enjoy solving challenges, whether through elegant design or smart code.</p>
       <p>I’m currently sharpening my skills in full-stack development and diving deeper into machine learning.</p>
     </section>
 
-    <section class="hobbies" data-aos="fade-up">
+    <section class="hobbies fade-in-up">
       <h2>What I Love Doing</h2>
       <ul>
         <li>Designing posters and branding assets</li>
@@ -100,9 +177,10 @@
         <li>Playing bass guitar to unwind and connect spiritually</li>
       </ul>
     </section>
+
   </main>
 
-  <footer class="main-footer" data-aos="fade-up">
+  <footer class="main-footer fade-in-up">
     <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
@@ -116,13 +194,28 @@
     });
   </script>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Intersection Observer for fade-in and fade-out -->
   <script>
-    AOS.init({
-      duration: 1000, // animation duration
-      once: true      // animation happens only once
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    let lastScrollY = window.scrollY;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const currentScrollY = window.scrollY;
+
+        if (entry.isIntersecting && currentScrollY > lastScrollY) {
+          entry.target.classList.add('visible');
+        } else if (!entry.isIntersecting || currentScrollY < lastScrollY) {
+          entry.target.classList.remove('visible');
+        }
+
+        lastScrollY = currentScrollY;
+      });
+    }, {
+      threshold: 0.2
     });
+
+    fadeElements.forEach(el => observer.observe(el));
   </script>
 
   <script src="script.js"></script>
