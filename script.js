@@ -24,6 +24,13 @@ window.addEventListener("load", function () {
         showCursor: true,
         cursorChar: "|",
     });
+
+    // Add event listener to CTA button
+    document.getElementById('cta-button').addEventListener('click', function () {
+        const messageContainer = document.getElementById('message-container');
+        messageContainer.style.display = 'block'; // Show the message
+        messageContainer.innerHTML = '🎉 Surprise! Here is your surprise message! 🎉'; // Display surprise message
+    });
 });
 
 // Smooth Scroll for internal links (anchors)
