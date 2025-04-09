@@ -7,116 +7,44 @@
   <title>About Me | Misheck Onduso</title>
   <link rel="stylesheet" href="style1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-
-    .about-intro {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-      gap: 2rem;
-    }
-
-    .about-text {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .about-image {
-      flex: 1;
-      max-width: 400px;
-    }
-
-    .about-image img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .core-values, .my-journey, .hobbies {
-      padding: 2rem;
-    }
-
+    /* Fade In Up Animation */
     .fade-in-up {
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-
     .fade-in-up.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .main-footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #333;
-      color: #fff;
-      margin-top: 3rem;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #333;
-      color: white;
-    }
-
-    .navbar .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .navbar .nav-links li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .navbar .nav-links li a.active {
-      border-bottom: 2px solid #fff;
-    }
-
+    /* Hamburger menu styles */
     .hamburger {
       display: none;
-      cursor: pointer;
       font-size: 1.5rem;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
-      .navbar .nav-links {
+      .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #444;
+        background-color: #333;
         position: absolute;
         top: 60px;
         right: 0;
-        padding: 1rem;
         width: 200px;
+        padding: 1rem;
+        z-index: 1000;
       }
 
-      .navbar .nav-links.show {
+      .nav-links.show {
         display: flex;
       }
 
       .hamburger {
         display: block;
-      }
-
-      .about-intro {
-        flex-direction: column;
-        text-align: center;
       }
     }
   </style>
@@ -138,17 +66,15 @@
   </header>
 
   <main class="about-page">
-
     <section class="about-intro fade-in-up">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning.</p>
-        <p>I’m always curious, always learning, and always looking to build solutions that matter. With a creative mind and a love for innovation, I strive to merge technology with real-world impact.</p>
-        <p><strong>My mission: To become a technocrat who transforms ideas into impactful digital experiences.</strong></p>
-      </div>
-      <div class="about-image fade-in-up">
-        <img src="me.jpg" alt="Photo of Misheck Onduso">
-      </div>
+      <h2>About Me</h2>
+      <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning. With a constant drive for learning and growth, I strive to push my limits and bring innovative ideas to life. I thrive in environments that foster creativity and collaboration.</p>
+      <p>Over the years, I’ve honed my skills in web development and graphic design, applying them to solve real-world problems. I enjoy designing posters, conducting deep research, and participating in voluntary work to stay grounded and inspired.</p>
+      <p><strong>My goal is to become a technocrat.</strong></p>
+    </section>
+
+    <section class="about-image fade-in-up" style="text-align: center;">
+      <img src="me.jpg" alt="Me" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
     </section>
 
     <section class="core-values fade-in-up">
@@ -177,7 +103,6 @@
         <li>Playing bass guitar to unwind and connect spiritually</li>
       </ul>
     </section>
-
   </main>
 
   <footer class="main-footer fade-in-up">
@@ -185,7 +110,7 @@
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
 
-  <!-- Hamburger script -->
+  <!-- Hamburger Menu Script -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -194,28 +119,27 @@
     });
   </script>
 
-  <!-- Intersection Observer for fade-in and fade-out -->
+  <!-- Fade In / Out on Scroll -->
   <script>
-    const fadeElements = document.querySelectorAll('.fade-in-up');
-    let lastScrollY = window.scrollY;
+    const fadeEls = document.querySelectorAll('.fade-in-up');
+    let lastScrollTop = 0;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const currentScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      let currentScroll = window.pageYOffset;
 
-        if (entry.isIntersecting && currentScrollY > lastScrollY) {
-          entry.target.classList.add('visible');
-        } else if (!entry.isIntersecting || currentScrollY < lastScrollY) {
-          entry.target.classList.remove('visible');
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (inView && currentScroll > lastScrollTop) {
+          el.classList.add('visible');
+        } else if (currentScroll < lastScrollTop) {
+          el.classList.remove('visible');
         }
-
-        lastScrollY = currentScrollY;
       });
-    }, {
-      threshold: 0.2
-    });
 
-    fadeElements.forEach(el => observer.observe(el));
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
   </script>
 
   <script src="script.js"></script>
