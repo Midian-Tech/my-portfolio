@@ -35,6 +35,47 @@
         #cta-button:hover {
             background-color: #0056b3; /* Change color when hovered */
         }
+        /* Hide nav-links by default on small screens */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 999;
+}
+
+/* Show nav-links when hamburger is clicked */
+.nav-links.show {
+    display: flex;
+}
+
+/* Make nav horizontal again on wider screens */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Optional: style for hamburger icon */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
   
 
 
