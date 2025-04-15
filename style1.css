@@ -440,4 +440,48 @@ footer {
 .contact-form button:hover {
   background-color: #005bb5;
 }
+/* Make sure the hamburger is visible and styled */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333; /* Color of the hamburger icon */
+    display: block;
+    z-index: 1000; /* Ensure it's above other elements */
+    margin-right: 20px; /* Space from the right edge */
+}
+
+/* Ensure nav-links are hidden by default on small screens */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 999; /* Keep it above other elements */
+}
+
+/* When hamburger is clicked, show the menu */
+.nav-links.show {
+    display: flex;
+}
+
+/* On larger screens, make the navbar horizontal and hide hamburger */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
+
 
