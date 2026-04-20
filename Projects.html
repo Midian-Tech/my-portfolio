@@ -4,15 +4,296 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Projects | Misheck Onduso</title>
+  <meta name="description" content="Explore Misheck Onduso's software development projects - AI systems, web applications, mobile apps, and open source contributions">
+  <title>Projects | Misheck Onduso - Computer Scientist</title>
   <link rel="stylesheet" href="style1.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .projects-hero {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+    
+    .projects-hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+    }
+    
+    .projects-hero p {
+      font-size: 1.3rem;
+      color: #4a5568;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .projects-section {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .projects-section:nth-child(even) {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+    
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+    }
+    
+    .project-content {
+      padding: 2rem;
+    }
+    
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 10px;
+    }
+    
+    .project-category {
+      display: inline-block;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .project-description {
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .tech-badge {
+      background: #f7fafc;
+      color: #4a5568;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+    
+    .project-link.primary {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+    }
+    
+    .project-link.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .project-link.secondary {
+      background: transparent;
+      color: #667eea;
+      border: 2px solid #667eea;
+    }
+    
+    .project-link.secondary:hover {
+      background: #667eea;
+      color: white;
+    }
+    
+    .project-link i {
+      font-size: 1rem;
+    }
+    
+    .featured-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    .featured-section h2 {
+      color: white;
+    }
+    
+    .featured-section h2::after {
+      background: white;
+    }
+    
+    .featured-project {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem;
+      border-radius: 20px;
+    }
+    
+    .featured-project h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .featured-project p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    
+    .featured-tech {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    
+    .featured-tech span {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+    
+    .featured-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .featured-link {
+      background: white;
+      color: #667eea;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .featured-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .projects-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .featured-project {
+        padding: 2rem;
+      }
+      
+      .featured-project h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
 
   <header>
     <nav class="navbar">
@@ -29,47 +310,311 @@
     </nav>
   </header>
 
-  <main class="projects-page">
-    <section id="projects">
-      <h2>My Projects</h2>
+  <section class="projects-hero">
+    <div class="container">
+      <h1>My Projects</h1>
+      <p>Explore my portfolio of innovative software solutions, from AI-powered systems to full-stack web applications and mobile experiences.</p>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <div class="container">
+      <h2>Featured Project</h2>
+      <div class="featured-project">
+        <h3>KenGen Booking System</h3>
+        <p>A comprehensive booking management system developed during my attachment at Kenya Electricity Generating Company (KenGen). This system streamlines the booking process for various facilities and services, improving efficiency and user experience.</p>
+        <div class="featured-tech">
+          <span>HTML/CSS</span>
+          <span>JavaScript</span>
+          <span>SQL</span>
+          <span>Python</span>
+        </div>
+        <div class="featured-links">
+          <a href="https://github.com/Midian-Tech/kengen_booking" class="featured-link">
+            <i class="fab fa-github"></i>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+      <h2 class="section-title">AI & Machine Learning Projects</h2>
       <div class="project-grid">
         <div class="project-card">
-          <h3>AI Campus Navigator</h3>
-          <p>A web-based system that helps Kisii University students locate lecture halls, check class schedules, and receive alerts using AI.</p>
-          <a href="#">View Project</a>
+          <div class="project-image">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Smart Wish System</h3>
+            <span class="project-category">Web Application</span>
+            <p class="project-description">A Valentine's Day themed application where loved ones can send each other heartfelt messages and wishes. Features real-time messaging and beautiful UI design.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">React</span>
+            </div>
+            <div class="project-links">
+              <a href="https://valentine-d95m.vercel.app/" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/Midian-Tech/valentine" class="project-link secondary">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
+
         <div class="project-card">
-          <h3>Graphic Design Showcase</h3>
-          <p>A collection of digital posters, banners, and social media creatives crafted using Adobe Photoshop.</p>
-          <a href="#">View Project</a>
+          <div class="project-image">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Midian Business Portfolio</h3>
+            <span class="project-category">Business Website</span>
+            <p class="project-description">Professional business portfolio website for Midian Tech Ltd. Showcases company services, projects, and provides contact information with modern design.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Responsive Design</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.midian.site" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Site
+              </a>
+              <a href="https://github.com/Midian-Tech/midian-portfolio" class="project-link secondary">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>This responsive personal portfolio showcases my projects, skills, and background in a clean UI.</p>
-          <a href="#">View Project</a>
-        </div>
-        <!-- Add more project cards if needed -->
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Web Development Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <span class="project-category">Full-Stack</span>
+            <p class="project-description">Built a complete e-commerce solution with user authentication, payment processing, inventory management, and real-time order tracking.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">MongoDB</span>
+              <span class="tech-badge">Stripe</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/misheckonduso/ecommerce" class="project-link secondary">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Task Management System</h3>
+            <span class="project-category">Productivity</span>
+            <p class="project-description">Developed a collaborative task management application with real-time updates, team collaboration features, and advanced analytics dashboard.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">Vue.js</span>
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Socket.io</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/misheckonduso/task-manager" class="project-link secondary">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-blog"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Content Management System</h3>
+            <span class="project-category">CMS</span>
+            <p class="project-description">Created a flexible CMS with rich text editing, media management, SEO optimization, and multi-user role management capabilities.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Prisma</span>
+              <span class="tech-badge">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/misheckonduso/cms" class="project-link secondary">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Mobile Development Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Fitness Tracker App</h3>
+            <span class="project-category">Mobile</span>
+            <p class="project-description">Cross-platform mobile application for tracking workouts, nutrition, and health metrics with social features and personalized recommendations.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">React Native</span>
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Redux</span>
+              <span class="tech-badge">Expo</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">
+                <i class="fas fa-download"></i>
+                Download App
+              </a>
+              <a href="https://github.com/misheckonduso/fitness-tracker" class="project-link secondary">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Student Portal App</h3>
+            <span class="project-category">Education</span>
+            <p class="project-description">Mobile application for students to access course materials, submit assignments, check grades, and communicate with instructors.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">Flutter</span>
+              <span class="tech-badge">Dart</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">
+                <i class="fas fa-download"></i>
+                Download App
+              </a>
+              <a href="https://github.com/misheckonduso/student-portal" class="project-link secondary">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Open Source Contributions</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Python ML Library</h3>
+            <span class="project-category">Open Source</span>
+            <p class="project-description">Contributed to a popular machine learning library by implementing new algorithms, improving documentation, and fixing critical bugs.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">NumPy</span>
+              <span class="tech-badge">Testing</span>
+              <span class="tech-badge">Documentation</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/misheckonduso/python-ml-contributions" class="project-link primary">
+                <i class="fab fa-github"></i>
+                View Contributions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">React Component Library</h3>
+            <span class="project-category">Open Source</span>
+            <p class="project-description">Created and maintained a reusable React component library with comprehensive documentation and TypeScript support.</p>
+            <div class="tech-stack">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Storybook</span>
+              <span class="tech-badge">Jest</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/misheckonduso/react-components" class="project-link primary">
+                <i class="fab fa-github"></i>
+                View Library
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="main-footer">
-    <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
+    <p>&copy; 2026 Misheck Onduso. All Rights Reserved.</p>
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
 
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
-
-    window.addEventListener('load', () => {
-      document.getElementById('loader').style.display = 'none';
-    });
   </script>
-   <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

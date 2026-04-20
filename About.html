@@ -4,58 +4,225 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>About Me | Misheck Onduso</title>
+  <meta name="description" content="Learn about Misheck Onduso - Computer Scientist with expertise in AI/ML, Web Development, and Software Engineering">
+  <title>About | Misheck Onduso - Computer Scientist</title>
   <link rel="stylesheet" href="style1.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
+    .about-hero {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+      padding: 80px 20px 60px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+    
     .about-intro {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .about-text h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .about-description {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #2d3748;
+      margin-bottom: 30px;
+    }
+    
+    .highlight {
+      color: #667eea;
+      font-weight: 600;
+      position: relative;
+    }
+    
+    .quick-stats {
+      display: flex;
       gap: 2rem;
-      flex-wrap: wrap;
+      margin-top: 30px;
     }
-
-    .about-text {
-      flex: 1;
-      min-width: 250px;
+    
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-
+    
+    .stat i {
+      color: #667eea;
+      font-size: 1.2rem;
+    }
+    
     .about-image {
-      flex: 1;
-      max-width: 400px;
+      flex: 0 0 400px;
     }
-
+    
     .about-image img {
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
     }
-
+    
+    .education-section, .expertise-section, .achievements-section, .values-section, .interests-section {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .education-section:nth-child(even), .expertise-section:nth-child(even) {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+    
+    .education-grid, .expertise-grid, .achievements-grid, .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .education-item, .expertise-card, .achievement-item, .value-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .education-item:hover, .expertise-card:hover, .achievement-item:hover, .value-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .edu-icon, .expertise-icon, .achievement-icon, .value-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .edu-content h3, .expertise-card h3, .achievement-item h3, .value-item h3 {
+      color: #1a1a2e;
+      margin-bottom: 10px;
+    }
+    
+    .institution, .period {
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .tech-tags span {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    
+    .interests-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .interests-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #2d3748;
+    }
+    
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .interest-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .interest-item i {
+      font-size: 2rem;
+      color: #667eea;
+    }
+    
     @media (max-width: 768px) {
       .about-intro {
         flex-direction: column;
-        align-items: center;
         text-align: center;
       }
+      
+      .about-image {
+        flex: 0 0 300px;
+      }
+      
+      .quick-stats {
+        justify-content: center;
+      }
+      
+      .education-grid, .expertise-grid, .achievements-grid, .values-grid {
+        grid-template-columns: 1fr;
+      }
     }
-    .about-image {
-  flex: 1;
-  max-width: 400px;
-  background-color: white;
-  padding: 10px;
-  border-radius: 20px; /* Rounded rectangle */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px; /* Inner roundness */
-  object-fit: cover;
-  display: block;
-}
-
   </style>
 </head>
 <body>
@@ -76,48 +243,203 @@
   </header>
 
   <main class="about-page">
-    <section class="about-intro">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Hello! I'm Misheck Onduso, a passionate and dedicated individual with a deep interest in graphic design, mobile app development, web development, and machine learning. I’m always curious, always learning, and always looking to build solutions that matter.</p>
-        <p>With a creative mind and a love for innovation, I strive to merge technology with real-world impact. My professional journey has been filled with problem-solving, teamwork, and continuous growth.</p>
-        <p><strong>My mission: To become a technocrat who transforms ideas into impactful digital experiences.</strong></p>
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-intro">
+          <div class="about-text">
+            <h1>About Me</h1>
+            <div class="subtitle">Computer Scientist </div>
+            <p class="about-description">
+              I'm Misheck Onduso, a passionate computer scientist with hands-on experience in software development, database management, and web technologies. I specialize in creating practical solutions using Python, JavaScript, Java, and SQL databases.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Major Attachment</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="me.jpg" alt="Misheck Onduso - Computer Scientist">
+          </div>
+        </div>
       </div>
-      <div class="about-image">
-        <img src="me.jpg" alt="Photo of Misheck Onduso">
+    </section>
+
+    <section class="education-section">
+      <div class="container">
+        <h2>Education & Background</h2>
+        <div class="education-grid">
+          <div class="education-item">
+            <div class="edu-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-content">
+              <h3>Bachelor of Science in Computer Science</h3>
+              <p class="institution">Kisii University</p>
+              <p class="period">2022 - 2026</p>
+              <p class="description">Specialized in Software Engineering, Machine Learning,Artificial Inteligence and Database Systems. Awaiting graduation.</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="edu-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-content">
+              <h3>KENYA CERTIFICATE OF SECONDARY EDUCATION</h3>
+              <p class="institution">Kangaru School -Embu</p>
+              <p class="period">2018 - 2021</p>
+              <p class="description">Completed my KCSE with a mean grade of B(Plain)</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="core-values">
-      <h2>Core Values</h2>
-      <ul>
-        <li><strong>Creativity:</strong> I love building fresh, original concepts that solve problems effectively.</li>
-        <li><strong>Discipline:</strong> Staying consistent and committed is key to growth.</li>
-        <li><strong>Integrity:</strong> I believe in honest work that adds value.</li>
-        <li><strong>Collaboration:</strong> I thrive in environments where people work together to achieve greatness.</li>
-      </ul>
+    <section class="expertise-section">
+      <div class="container">
+        <h2>Areas of Expertise</h2>
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Artificial Intelligence</h3>
+            <p>Machine Learning, Deep Learning, Natural Language Processing, Computer Vision</p>
+            <div class="tech-tags">
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>PyTorch</span>
+              <span>Scikit-learn</span>
+            </div>
+          </div>
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Full-Stack Development, RESTful APIs, Responsive Design, Progressive Web Apps</p>
+            <div class="tech-tags">
+              <span>Python(FLASK)</span>
+              <span>Html</span>
+              <span>CSS</span>
+              <span>JS/span>
+            </div>
+          </div>
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Development</h3>
+            <p>Cross-Platform Apps, Native Development, UI/UX Design, App Optimization</p>
+            <div class="tech-tags">
+              <span>React Native</span>
+              <span>Flutter</span>
+              <span>Android</span>
+              <span>iOS</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="my-journey">
-      <h2>My Journey So Far</h2>
-      <p>My tech journey started with curiosity and a passion for design. Since then, I’ve worked on various projects—from simple websites to AI-powered systems. I enjoy solving challenges, whether through elegant design or smart code.</p>
-      <p>I’m currently sharpening my skills in full-stack development and diving deeper into machine learning.</p>
+    <section class="achievements-section">
+      <div class="container">
+        <h2>Key Achievements</h2>
+        <div class="achievements-grid">
+          <div class="achievement-item">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3>AI Campus Navigator</h3>
+            <p>Developed an AI-powered navigation system for Kisii University, helping 10,000+ students locate lecture halls and manage schedules efficiently.</p>
+          </div>
+          
+          <div class="achievement-item">
+            <div class="achievement-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Open Source Contributor</h3>
+            <p>Active contributor to various open-source projects  on GitHub.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="hobbies">
-      <h2>What I Love Doing</h2>
-      <ul>
-        <li>Designing posters and branding assets</li>
-        <li>Developing web and mobile applications</li>
-        <li>Researching emerging technologies</li>
-        <li>Volunteering and inspiring others through Christian union activities</li>
-        <li>Playing bass guitar to unwind and connect spiritually</li>
-      </ul>
+    <section class="values-section">
+      <div class="container">
+        <h2>Core Values & Principles</h2>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Innovation</h3>
+            <p>Constantly pushing boundaries and exploring cutting-edge technologies to solve complex problems.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Integrity</h3>
+            <p>Building trustworthy solutions through ethical coding practices and transparent development.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <i class="fas fa-sync"></i>
+            </div>
+            <h3>Continuous Learning</h3>
+            <p>Embracing new challenges and staying updated with the latest technological advancements.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h3>Collaboration</h3>
+            <p>Working effectively in teams to create solutions that are greater than the sum of their parts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interests-section">
+      <div class="container">
+        <h2>Beyond Code</h2>
+        <div class="interests-content">
+          <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. I'm also passionate about:</p>
+          <div class="interests-grid">
+            <div class="interest-item">
+              <i class="fas fa-music"></i>
+              <span>Playing Bass Guitar</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-book"></i>
+              <span>Tech Literature</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-church"></i>
+              <span>Community Service</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-hiking"></i>
+              <span>Outdoor Adventures</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
+    <p>&copy; 2026 Misheck Onduso. All Rights Reserved.</p>
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
 

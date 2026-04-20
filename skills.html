@@ -4,9 +4,305 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Skills | Misheck Onduso</title>
+  <meta name="description" content="Misheck Onduso's technical skills - Programming languages, frameworks, tools, and expertise areas in computer science">
+  <title>Skills | Misheck Onduso - Computer Scientist</title>
   <link rel="stylesheet" href="style1.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .skills-hero {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+    
+    .skills-hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+    }
+    
+    .skills-hero p {
+      font-size: 1.3rem;
+      color: #4a5568;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .skills-section {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .skills-section:nth-child(even) {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .skill-category {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-5px);
+    }
+    
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .category-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    
+    .skill-item {
+      margin-bottom: 1.5rem;
+    }
+    
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .skill-name {
+      font-weight: 600;
+      color: #2d3748;
+    }
+    
+    .skill-level {
+      font-size: 0.85rem;
+      color: #667eea;
+      font-weight: 600;
+    }
+    
+    .skill-bar {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .skill-progress {
+      height: 100%;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 4px;
+      transition: width 1s ease;
+    }
+    
+    .proficiency-legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+    
+    .legend-text {
+      font-size: 0.9rem;
+      color: #4a5568;
+    }
+    
+    .expertise-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 20px;
+    }
+    
+    .expertise-section h2 {
+      color: white;
+    }
+    
+    .expertise-section h2::after {
+      background: white;
+    }
+    
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .expertise-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .expertise-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .expertise-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .expertise-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .expertise-description {
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    
+    .certifications-section {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .certification-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .certification-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .cert-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    .cert-content h3 {
+      color: #1a1a2e;
+      margin-bottom: 8px;
+    }
+    
+    .cert-content p {
+      color: #4a5568;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+    
+    .cert-date {
+      color: #667eea;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    
+    @media (max-width: 768px) {
+      .skills-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .certifications-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .certification-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,40 +316,122 @@
         <li><a href="Projects.html">Projects</a></li>
         <li><a href="skills.html" class="active">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
-         <li><a href="testimonials.html">Testimonial</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="skills-page">
-    <section class="skills-section">
-      <h2>My Skills</h2>
-      <ul class="skills-list">
-        <li>HTML & CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>React</li>
-        <li>Adobe Photoshop</li>
-        <!-- Add more skills if needed -->
-      </ul>
-    </section>
-  </main>
+  <section class="skills-hero">
+    <div class="container">
+      <h1>Technical Skills</h1>
+      <p>Comprehensive overview of my programming languages, frameworks, tools, and technical expertise as a computer scientist.</p>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <div class="container">
+      <h2 class="section-title">My Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <h3 class="category-title">Python</h3>
+          </div>
+          <p class="skill-description">Expert-level proficiency in Python for web development, data analysis, and automation.</p>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fab fa-js"></i>
+            </div>
+            <h3 class="category-title">JavaScript</h3>
+          </div>
+          <p class="skill-description">Strong JavaScript skills for frontend and backend development.</p>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fab fa-react"></i>
+            </div>
+            <h3 class="category-title">React</h3>
+          </div>
+          <p class="skill-description">Experience building modern web applications with React framework.</p>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="category-title">SQL</h3>
+          </div>
+          <p class="skill-description">Database design and management with SQL for efficient data handling.</p>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <h3 class="category-title">Git</h3>
+          </div>
+          <p class="skill-description">Version control and collaborative development using Git.</p>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="category-title">ML/AI</h3>
+          </div>
+          <p class="skill-description">Machine Learning and Artificial Intelligence development skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="main-footer">
-    <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
+    <p>&copy; 2026 Misheck Onduso. All Rights Reserved.</p>
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
 
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
-  </script>
- 
 
+    // Animate skill bars on scroll
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progressBars = entry.target.querySelectorAll('.skill-progress');
+          progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+              bar.style.width = width;
+            }, 200);
+          });
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.skill-category').forEach(category => {
+      observer.observe(category);
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-

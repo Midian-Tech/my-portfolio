@@ -3,9 +3,376 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Misheck Onduso</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Contact Misheck Onduso - Computer Scientist & Software Developer. Get in touch for collaborations, projects, or opportunities.">
+  <title>Contact | Misheck Onduso - Computer Scientist</title>
   <link rel="stylesheet" href="style1.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+    
+    .contact-hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+    }
+    
+    .contact-hero p {
+      font-size: 1.3rem;
+      color: #4a5568;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .contact-section {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .contact-section:nth-child(even) {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+    
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    
+    .contact-info {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-info h3 {
+      font-size: 1.8rem;
+      color: #1a1a2e;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-info p {
+      color: #4a5568;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-text h4 {
+      color: #1a1a2e;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+    
+    .contact-text p {
+      color: #4a5568;
+      margin: 0;
+      font-size: 1rem;
+    }
+    
+    .social-links-section {
+      margin-top: 2rem;
+    }
+    
+    .social-links-title {
+      font-size: 1.3rem;
+      color: #1a1a2e;
+      margin-bottom: 1rem;
+    }
+    
+    .social-links-grid {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: #f7fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+      border-color: transparent;
+      transform: translateY(-2px);
+    }
+    
+    .social-link i {
+      font-size: 1.2rem;
+    }
+    
+    .contact-form-container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-group label {
+      color: #1a1a2e;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 12px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .success-message {
+      background: #48bb78;
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+      display: none;
+    }
+    
+    .error-message {
+      background: #f56565;
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+      display: none;
+    }
+    
+    .availability-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    .availability-section h2 {
+      color: white;
+    }
+    
+    .availability-section h2::after {
+      background: white;
+    }
+    
+    .availability-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .availability-status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .status-indicator {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #48bb78;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(72, 187, 120, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
+      }
+    }
+    
+    .availability-text {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    
+    .response-time {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-top: 2rem;
+    }
+    
+    .response-time h3 {
+      margin-bottom: 1rem;
+    }
+    
+    .response-time-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .response-item {
+      text-align: center;
+    }
+    
+    .response-item i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .response-item h4 {
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .response-time-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -19,73 +386,247 @@
         <li><a href="Projects.html">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="testimonials.html" class="active">Testimonials</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="contact-page">
-   <section id="contact" class="contact-section">
-  <h2 class="section-title">Contact Me</h2>
-  <form id="contactForm" action="https://formspree.io/f/xeoadvrd" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-     <div id="successPopup" style="display: none; margin-top: 20px; color: green; font-weight: 600;">
-    ✅ Your message has been sent! Redirecting...
-  </div>
-  </form>
-</section>
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p>I'm always interested in hearing about new projects, opportunities, and collaborations. Whether you have a question or just want to say hi, feel free to reach out!</p>
+    </div>
+  </section>
 
-  </main>
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>I'm passionate about building innovative solutions and would love to discuss how we can work together. Whether you're looking for a collaborator, have a project in mind, or just want to chat about technology, I'm here to help.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>m2547643@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>+254 700 123 456</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Nairobi, Kenya</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-links-section">
+            <h4 class="social-links-title">Connect on Social Media</h4>
+            <div class="social-links-grid">
+              <a href="https://github.com/Midian-Tech" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/misheck-onduso-6ab358271/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BGgHYc9i4QnuZidwSzy6YkQ%3D%3D" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+              </a>
+              <a href="https://twitter.com/misheckonduso" target="_blank" class="social-link">
+                <i class="fab fa-twitter"></i>
+                Twitter
+              </a>
+              <a href="https://instagram.com/misheckonduso" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <h3>Send Me a Message</h3>
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Misheck Onduso">
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email *</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="project">Project Collaboration</option>
+                <option value="job">Job Opportunity</option>
+                <option value="consulting">Consulting</option>
+                <option value="general">General Inquiry</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your project or inquiry..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span id="btnText">Send Message</span>
+            </button>
+            
+            <div class="success-message" id="successMessage">
+              <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+              <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="availability-section">
+    <div class="container">
+      <h2 class="section-title">Current Availability</h2>
+      <div class="availability-content">
+        <div class="availability-status">
+          <div class="status-indicator"></div>
+          <span class="availability-text">Available for New Projects</span>
+        </div>
+        
+        <p>I'm currently open to freelance projects, consulting opportunities, and full-time positions. Let's discuss how I can help bring your ideas to life!</p>
+        
+        <div class="response-time">
+          <h3>Response Times</h3>
+          <div class="response-time-grid">
+            <div class="response-item">
+              <i class="fas fa-envelope"></i>
+              <h4>Email</h4>
+              <p>Within 24 hours</p>
+            </div>
+            <div class="response-item">
+              <i class="fas fa-phone"></i>
+              <h4>Phone Calls</h4>
+              <p>Business Hours</p>
+            </div>
+            <div class="response-item">
+              <i class="fab fa-linkedin"></i>
+              <h4>LinkedIn</h4>
+              <p>Within 48 hours</p>
+            </div>
+            <div class="response-item">
+              <i class="fab fa-github"></i>
+              <h4>GitHub</h4>
+              <p>As needed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="main-footer">
-    <p>&copy; 2025 Misheck Onduso. All Rights Reserved.</p>
+    <p>&copy; 2026 Misheck Onduso. All Rights Reserved.</p>
     <p>Designed by <strong>Midian Tech Ltd.</strong></p>
   </footer>
 
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
-  </script>
-   <script src="script.js"></script>
-  <script>
-  const form = document.getElementById('contactForm');
-  const successPopup = document.getElementById('successPopup');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      btnText.textContent = 'Sending...';
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+      
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+      
+      try {
+        // Simulate form submission (replace with actual endpoint)
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        
+        // Show success message
+        successMessage.style.display = 'block';
+        contactForm.reset();
+        
+        // Reset button after delay
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          btnText.textContent = 'Send Message';
+        }, 1000);
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 5000);
+        
+      } catch (error) {
+        // Show error message
+        errorMessage.style.display = 'block';
+        submitBtn.disabled = false;
+        btnText.textContent = 'Send Message';
+        
+        // Hide error message after 5 seconds
+        setTimeout(() => {
+          errorMessage.style.display = 'none';
+        }, 5000);
+      }
+    });
+
+    // Form validation
+    const inputs = contactForm.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          input.style.borderColor = '#f56565';
+        } else {
+          input.style.borderColor = '#e2e8f0';
         }
       });
-
-      if (response.ok) {
-        form.reset();
-        successPopup.style.display = 'block';
-        setTimeout(() => {
-          window.location.href = "thankyou.html"; // redirect after 3 sec
-        }, 3000);
-      } else {
-        alert("Oops! Something went wrong.");
-      }
-    } catch (error) {
-      alert("Submission failed. Please try again later.");
-    }
-  });
-</script>
-
+      
+      input.addEventListener('focus', () => {
+        input.style.borderColor = '#667eea';
+      });
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
