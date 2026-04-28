@@ -109,6 +109,13 @@
       bottom: 0;
       background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
     }
+
+    .project-preview {
+      width: 100%;
+      height: 220px;
+      border: 0;
+      background: #f8fafc;
+    }
     
     .project-content {
       padding: 2rem;
@@ -273,6 +280,15 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
+
+    .featured-preview {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
+      background: rgba(255, 255, 255, 0.85);
+    }
     
     @media (max-width: 768px) {
       .projects-hero h1 {
@@ -290,6 +306,10 @@
       .featured-project h3 {
         font-size: 1.5rem;
       }
+
+      .featured-preview {
+        height: 220px;
+      }
     }
   </style>
 </head>
@@ -304,8 +324,9 @@
         <li><a href="About.html">About</a></li>
         <li><a href="Projects.html" class="active">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="my%20cv.jpg" download="Misheck-Onduso-CV.jpg" class="nav-resume-link"><i class="fas fa-download"></i> Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -321,16 +342,21 @@
     <div class="container">
       <h2>Featured Project</h2>
       <div class="featured-project">
-        <h3>KenGen Booking System</h3>
-        <p>A comprehensive booking management system developed during my attachment at Kenya Electricity Generating Company (KenGen). This system streamlines the booking process for various facilities and services, improving efficiency and user experience.</p>
+        <iframe class="featured-preview" src="https://valentine-d95m.vercel.app/" title="Smart Wish System Live Preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3>Smart Wish System</h3>
+        <p>A heartfelt web platform where users can create and share personalized wishes and messages. The project focuses on clean UI, smooth interactions, and a memorable user experience.</p>
         <div class="featured-tech">
           <span>HTML/CSS</span>
           <span>JavaScript</span>
-          <span>SQL</span>
-          <span>Python</span>
+          <span>React</span>
+          <span>Vercel</span>
         </div>
         <div class="featured-links">
-          <a href="https://github.com/Midian-Tech/kengen_booking" class="featured-link">
+          <a href="https://valentine-d95m.vercel.app/" class="featured-link" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt"></i>
+            Live Preview
+          </a>
+          <a href="https://github.com/Midian-Tech/valentine" class="featured-link" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i>
             View Code
           </a>
@@ -345,53 +371,22 @@
       <div class="project-grid">
         <div class="project-card">
           <div class="project-image">
-            <i class="fas fa-heart"></i>
+            <i class="fas fa-brain"></i>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Smart Wish System</h3>
-            <span class="project-category">Web Application</span>
-            <p class="project-description">A Valentine's Day themed application where loved ones can send each other heartfelt messages and wishes. Features real-time messaging and beautiful UI design.</p>
+            <h3 class="project-title">Fourth Year Project</h3>
+            <span class="project-category">AI/ML Research Project</span>
+            <p class="project-description">My final year computer science project focused on intelligent systems and practical machine learning implementation for real-world use cases.</p>
             <div class="tech-stack">
-              <span class="tech-badge">HTML</span>
-              <span class="tech-badge">CSS</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">React</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Machine Learning</span>
+              <span class="tech-badge">Data Analysis</span>
+              <span class="tech-badge">Research</span>
             </div>
             <div class="project-links">
-              <a href="https://valentine-d95m.vercel.app/" class="project-link primary">
-                <i class="fas fa-external-link-alt"></i>
-                Live Demo
-              </a>
-              <a href="https://github.com/Midian-Tech/valentine" class="project-link secondary">
+              <a href="https://github.com/Midian-Tech/FOURTH-YEAR-PROJECT" class="project-link primary" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Midian Business Portfolio</h3>
-            <span class="project-category">Business Website</span>
-            <p class="project-description">Professional business portfolio website for Midian Tech Ltd. Showcases company services, projects, and provides contact information with modern design.</p>
-            <div class="tech-stack">
-              <span class="tech-badge">HTML</span>
-              <span class="tech-badge">CSS</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">Responsive Design</span>
-            </div>
-            <div class="project-links">
-              <a href="https://www.midian.site" class="project-link primary">
-                <i class="fas fa-external-link-alt"></i>
-                Live Site
-              </a>
-              <a href="https://github.com/Midian-Tech/midian-portfolio" class="project-link secondary">
-                <i class="fab fa-github"></i>
-                GitHub
+                View Code
               </a>
             </div>
           </div>
@@ -405,196 +400,94 @@
       <h2 class="section-title">Web Development Projects</h2>
       <div class="project-grid">
         <div class="project-card">
+          <iframe class="project-preview" src="https://www.midian.site" title="Midian Creative Technologies Live Preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="project-image">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-globe"></i>
           </div>
           <div class="project-content">
-            <h3 class="project-title">E-Commerce Platform</h3>
-            <span class="project-category">Full-Stack</span>
-            <p class="project-description">Built a complete e-commerce solution with user authentication, payment processing, inventory management, and real-time order tracking.</p>
+            <h3 class="project-title">Midian Creative Technologies Website</h3>
+            <span class="project-category">Company Website</span>
+            <p class="project-description">Official website for Midian Creative Technologies showcasing services, portfolio work, and contact channels in a modern responsive design.</p>
             <div class="tech-stack">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">Node.js</span>
-              <span class="tech-badge">Express</span>
-              <span class="tech-badge">MongoDB</span>
-              <span class="tech-badge">Stripe</span>
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Responsive Design</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link primary">
+              <a href="https://www.midian.site" class="project-link primary" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-external-link-alt"></i>
-                Live Demo
-              </a>
-              <a href="https://github.com/misheckonduso/ecommerce" class="project-link secondary">
-                <i class="fab fa-github"></i>
-                GitHub
+                Live Preview
               </a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
+          <iframe class="project-preview" src="https://misheck-one.vercel.app" title="Personal Portfolio Live Preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="project-image">
-            <i class="fas fa-tasks"></i>
+            <i class="fas fa-user"></i>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Task Management System</h3>
-            <span class="project-category">Productivity</span>
-            <p class="project-description">Developed a collaborative task management application with real-time updates, team collaboration features, and advanced analytics dashboard.</p>
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <span class="project-category">Portfolio</span>
+            <p class="project-description">My personal portfolio presenting my technical profile, selected projects, and professional contact points with a polished user interface.</p>
             <div class="tech-stack">
-              <span class="tech-badge">Vue.js</span>
-              <span class="tech-badge">Django</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">Socket.io</span>
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Vercel</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link primary">
+              <a href="https://misheck-one.vercel.app" class="project-link primary" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-external-link-alt"></i>
-                Live Demo
-              </a>
-              <a href="https://github.com/misheckonduso/task-manager" class="project-link secondary">
-                <i class="fab fa-github"></i>
-                GitHub
+                Live Preview
               </a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
+          <iframe class="project-preview" src="https://pag-mu.vercel.app" title="P.A.G Machang'a Live Preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="project-image">
-            <i class="fas fa-blog"></i>
+            <i class="fas fa-landmark"></i>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Content Management System</h3>
-            <span class="project-category">CMS</span>
-            <p class="project-description">Created a flexible CMS with rich text editing, media management, SEO optimization, and multi-user role management capabilities.</p>
+            <h3 class="project-title">P.A.G Machang'a Website</h3>
+            <span class="project-category">Organization Website</span>
+            <p class="project-description">A website project designed for P.A.G Machang'a with clear content structure, accessibility-minded layout, and responsive pages.</p>
             <div class="tech-stack">
-              <span class="tech-badge">Next.js</span>
-              <span class="tech-badge">TypeScript</span>
-              <span class="tech-badge">Prisma</span>
-              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Vercel</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link primary">
+              <a href="https://pag-mu.vercel.app" class="project-link primary" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-external-link-alt"></i>
-                Live Demo
-              </a>
-              <a href="https://github.com/misheckonduso/cms" class="project-link secondary">
-                <i class="fab fa-github"></i>
-                GitHub
+                Live Preview
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects-section">
-    <div class="container">
-      <h2 class="section-title">Mobile Development Projects</h2>
-      <div class="project-grid">
         <div class="project-card">
           <div class="project-image">
-            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-building"></i>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Fitness Tracker App</h3>
-            <span class="project-category">Mobile</span>
-            <p class="project-description">Cross-platform mobile application for tracking workouts, nutrition, and health metrics with social features and personalized recommendations.</p>
+            <h3 class="project-title">KenGen Booking System</h3>
+            <span class="project-category">Web Application</span>
+            <p class="project-description">A booking management solution built for KenGen to simplify service booking workflows and improve booking visibility across teams.</p>
             <div class="tech-stack">
-              <span class="tech-badge">React Native</span>
-              <span class="tech-badge">Firebase</span>
-              <span class="tech-badge">Redux</span>
-              <span class="tech-badge">Expo</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link primary">
-                <i class="fas fa-download"></i>
-                Download App
-              </a>
-              <a href="https://github.com/misheckonduso/fitness-tracker" class="project-link secondary">
-                <i class="fab fa-github"></i>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Student Portal App</h3>
-            <span class="project-category">Education</span>
-            <p class="project-description">Mobile application for students to access course materials, submit assignments, check grades, and communicate with instructors.</p>
-            <div class="tech-stack">
-              <span class="tech-badge">Flutter</span>
-              <span class="tech-badge">Dart</span>
-              <span class="tech-badge">Node.js</span>
-              <span class="tech-badge">MongoDB</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link primary">
-                <i class="fas fa-download"></i>
-                Download App
-              </a>
-              <a href="https://github.com/misheckonduso/student-portal" class="project-link secondary">
-                <i class="fab fa-github"></i>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects-section">
-    <div class="container">
-      <h2 class="section-title">Open Source Contributions</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <div class="project-image">
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Python ML Library</h3>
-            <span class="project-category">Open Source</span>
-            <p class="project-description">Contributed to a popular machine learning library by implementing new algorithms, improving documentation, and fixing critical bugs.</p>
-            <div class="tech-stack">
+              <span class="tech-badge">HTML</span>
               <span class="tech-badge">Python</span>
-              <span class="tech-badge">NumPy</span>
-              <span class="tech-badge">Testing</span>
-              <span class="tech-badge">Documentation</span>
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">SQL</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/misheckonduso/python-ml-contributions" class="project-link primary">
+              <a href="https://github.com/Midian-Tech/kengen_booking" class="project-link secondary" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
-                View Contributions
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <i class="fas fa-code-branch"></i>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">React Component Library</h3>
-            <span class="project-category">Open Source</span>
-            <p class="project-description">Created and maintained a reusable React component library with comprehensive documentation and TypeScript support.</p>
-            <div class="tech-stack">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">TypeScript</span>
-              <span class="tech-badge">Storybook</span>
-              <span class="tech-badge">Jest</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/misheckonduso/react-components" class="project-link primary">
-                <i class="fab fa-github"></i>
-                View Library
+                View Code
               </a>
             </div>
           </div>
@@ -605,7 +498,7 @@
 
   <footer class="main-footer">
     <p>&copy; 2026 Misheck Onduso. All Rights Reserved.</p>
-    <p>Designed by <strong>Midian Tech Ltd.</strong></p>
+    <p>Designed by <strong><a href="https://www.midian.site" target="_blank" rel="noopener noreferrer">Midian Creative Technologies</a></strong></p>
   </footer>
 
   <script>

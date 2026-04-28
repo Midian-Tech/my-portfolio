@@ -2,322 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Read testimonials and reviews about Misheck Onduso - Computer Scientist & Software Developer from clients, colleagues, and collaborators">
-  <title>Testimonials | Misheck Onduso - Computer Scientist</title>
+  <meta name="description" content="Testimonials for Misheck Onduso from supervisors, collaborators, and mentees." />
+  <title>Testimonials | Misheck Onduso</title>
   <link rel="stylesheet" href="style1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     .testimonials-hero {
       background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
-      padding: 80px 20px 60px;
+      padding: 80px 20px 50px;
       text-align: center;
     }
-    
+
     .testimonials-hero h1 {
       font-size: 3rem;
-      font-weight: 700;
       color: #1a1a2e;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
-    
+
     .testimonials-hero p {
-      font-size: 1.3rem;
-      color: #4a5568;
-      max-width: 800px;
+      max-width: 780px;
       margin: 0 auto;
-      line-height: 1.6;
+      color: #4a5568;
+      font-size: 1.15rem;
     }
-    
+
     .testimonials-section {
-      padding: 60px 20px;
+      padding: 50px 20px 70px;
       background: rgba(255, 255, 255, 0.95);
     }
-    
-    .testimonials-section:nth-child(even) {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-    }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
     }
-    
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #1a1a2e;
-      text-align: center;
-      margin-bottom: 3rem;
-      position: relative;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      border-radius: 2px;
-    }
-    
+
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
-    
+
     .testimonial-card {
       background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      position: relative;
-      transition: transform 0.3s ease;
+      border-radius: 14px;
+      padding: 1.7rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease;
     }
-    
+
     .testimonial-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
     }
-    
+
+    .testimonial-rating {
+      margin-bottom: 12px;
+      color: #fbbf24;
+    }
+
     .testimonial-quote {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #4a5568;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-left: 2rem;
+      color: #334155;
+      line-height: 1.65;
+      margin-bottom: 14px;
     }
-    
-    .testimonial-quote::before {
-      content: '"';
-      position: absolute;
-      left: 0;
-      top: -10px;
-      font-size: 4rem;
-      color: #667eea;
-      opacity: 0.3;
-      font-family: Georgia, serif;
-    }
-    
+
     .testimonial-author {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 12px;
     }
-    
+
     .author-avatar {
-      width: 50px;
-      height: 50px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: linear-gradient(45deg, #667eea, #764ba2);
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       font-weight: 700;
-      font-size: 1.2rem;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      flex-shrink: 0;
     }
-    
+
     .author-info h4 {
+      margin: 0 0 2px;
       color: #1a1a2e;
-      margin-bottom: 5px;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
-    
+
     .author-info p {
-      color: #667eea;
-      font-size: 0.9rem;
       margin: 0;
-    }
-    
-    .testimonial-rating {
-      display: flex;
-      gap: 5px;
-      margin-bottom: 1rem;
-    }
-    
-    .star {
-      color: #fbbf24;
-      font-size: 1.2rem;
-    }
-    
-    .testimonial-form-section {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 60px 20px;
-    }
-    
-    .testimonial-form-section h2 {
-      color: white;
-    }
-    
-    .testimonial-form-section h2::after {
-      background: white;
-    }
-    
-    .form-container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .testimonial-form {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 2.5rem;
-      border-radius: 15px;
-    }
-    
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-    
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 12px 16px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      font-family: 'Inter', sans-serif;
-      transition: all 0.3s ease;
-    }
-    
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: white;
-      background: white;
-      color: #1a1a2e;
-    }
-    
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-    
-    .submit-btn {
-      background: white;
+      font-size: 0.9rem;
       color: #667eea;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 100%;
-    }
-    
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
-    }
-    
-    .submit-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-    
-    .success-message {
-      background: rgba(72, 187, 120, 0.2);
-      color: white;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
       font-weight: 600;
-      margin-top: 1rem;
-      display: none;
-      border: 1px solid rgba(72, 187, 120, 0.3);
-    }
-    
-    .error-message {
-      background: rgba(245, 101, 101, 0.2);
-      color: white;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: 600;
-      margin-top: 1rem;
-      display: none;
-      border: 1px solid rgba(245, 101, 101, 0.3);
-    }
-    
-    .stats-section {
-      padding: 60px 20px;
-      background: rgba(255, 255, 255, 0.95);
-    }
-    
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .stat-card {
-      text-align: center;
-      padding: 2rem;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    
-    .stat-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .stat-number {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #667eea;
-      margin-bottom: 10px;
-    }
-    
-    .stat-label {
-      color: #4a5568;
-      font-weight: 600;
-    }
-    
-    @media (max-width: 768px) {
-      .testimonials-hero h1 {
-        font-size: 2rem;
-      }
-      
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .testimonial-form {
-        padding: 1.5rem;
-      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <nav class="navbar">
       <div class="logo">Misheck Onduso</div>
@@ -327,248 +111,137 @@
         <li><a href="About.html">About</a></li>
         <li><a href="Projects.html">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
         <li><a href="testimonials.html" class="active">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="my%20cv.jpg" download="Misheck-Onduso-CV.jpg" class="nav-resume-link"><i class="fas fa-download"></i> Resume</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="testimonials-hero">
     <div class="container">
-      <h1>Client Testimonials</h1>
-      <p>Don't just take my word for it. Here's what clients, colleagues, and collaborators have to say about working with me on various projects.</p>
-    </div>
-  </section>
-
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Happy Clients</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">100+</div>
-          <div class="stat-label">Projects Completed</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">5.0</div>
-          <div class="stat-label">Average Rating</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">3+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-      </div>
+      <h1>Testimonials</h1>
+      <p>Feedback from mentors, supervisors, collaborators, and mentees who have worked with me on real projects.</p>
     </div>
   </section>
 
   <section class="testimonials-section">
     <div class="container">
-      <h2 class="section-title">What People Say</h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </div>
-          <p class="testimonial-quote">
-            Working with Misheck has been a game-changer. His attention to detail, clean code, and problem-solving mindset are exceptional. He consistently delivers high-quality work on time, and his passion for tech is contagious.
-          </p>
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Working with Misheck has been a game-changer. His attention to detail, clean code, and problem-solving mindset are excellent.</p>
           <div class="testimonial-author">
             <div class="author-avatar">KM</div>
             <div class="author-info">
               <h4>Ken Mutuku</h4>
-              <p>Software Developer</p>
+              <p>Software Engineer</p>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </div>
-          <p class="testimonial-quote">
-            Misheck is a visionary and a great team player. Working with him was a pleasure! He brings innovative solutions to complex problems and always maintains a positive attitude throughout the development process.
-          </p>
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Misheck is visionary and collaborative. He approaches technical challenges with confidence and always keeps quality high.</p>
           <div class="testimonial-author">
             <div class="author-avatar">IM</div>
             <div class="author-info">
               <h4>Isaac Mukungi</h4>
-              <p>Web Developer</p>
+              <p>Software Engineer</p>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </div>
-          <p class="testimonial-quote">
-            An incredibly talented developer who always delivers beyond expectations. His expertise in AI and web development helped us transform our ideas into reality. Highly recommend for any complex project.
-          </p>
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Misheck consistently delivers beyond expectations and contributes practical ideas that improve both architecture and user experience.</p>
           <div class="testimonial-author">
             <div class="author-avatar">PM</div>
             <div class="author-info">
               <h4>Peter Mungai</h4>
-              <p>UX Designer</p>
+              <p>Project Collaborator</p>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </div>
-          <p class="testimonial-quote">
-            Misheck's technical skills are matched only by his professionalism and dedication. He took our project from concept to deployment with remarkable efficiency and attention to user experience.
-          </p>
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">During his KenGen attachment, Misheck demonstrated discipline, strong communication, and quick adaptation to enterprise workflows.</p>
           <div class="testimonial-author">
-            <div class="author-avatar">SJ</div>
+            <div class="author-avatar">MA</div>
             <div class="author-info">
-              <h4>Sarah Johnson</h4>
-              <p>Project Manager</p>
+              <h4>Madam Anne</h4>
+              <p>KenGen Staff Supervisor</p>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </div>
-          <p class="testimonial-quote">
-            The AI Campus Navigator project exceeded our expectations thanks to Misheck's innovative approach and technical expertise. His ability to translate complex requirements into elegant solutions is outstanding.
-          </p>
-          <div class="social-links-grid">
-            <a href="https://github.com/Midian-Tech" target="_blank" class="social-link">
-              <i class="fab fa-github"></i>
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/misheck-onduso-6ab358271/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BGgHYc9i4QnuZidwSzy6YkQ%3D%3D" target="_blank" class="social-link">
-              <i class="fab fa-linkedin"></i>
-              LinkedIn
-            </a>
-            <a href="https://twitter.com/misheckonduso" target="_blank" class="social-link">
-              <i class="fab fa-twitter"></i>
-              Twitter
-            </a>
-            <a href="https://instagram.com/misheckonduso" target="_blank" class="social-link">
-              <i class="fab fa-instagram"></i>
-              Instagram
-            </a>
-          </div>
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Misheck is reliable in team projects and contributes thoughtful technical solutions while keeping collaboration smooth and focused.</p>
           <div class="testimonial-author">
-            <div class="author-avatar">AO</div>
+            <div class="author-avatar">FN</div>
             <div class="author-info">
-              <h4>Dr. Alex Otieno</h4>
-              <p>University Dean</p>
+              <h4>Fancy Nateku</h4>
+              <p>Project Collaborator</p>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </div>
-          <p class="testimonial-quote">
-            Misheck's contribution to our open-source project was invaluable. His code quality, documentation skills, and collaborative spirit made him an exceptional team member. Looking forward to future collaborations!
-          </p>
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">I have worked with Misheck in project collaborations, and he brings clarity, technical depth, and professionalism to every sprint.</p>
           <div class="testimonial-author">
-            <div class="author-avatar">RC</div>
+            <div class="author-avatar">ZV</div>
             <div class="author-info">
-              <h4>Rachel Chen</h4>
-              <p>Open Source Maintainer</p>
+              <h4>Zedekiah Vincent</h4>
+              <p>Project Collaborator</p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="testimonial-form-section">
-    <div class="container">
-      <h2 class="section-title">Share Your Experience</h2>
-      <div class="form-container">
-        <form id="testimonialForm" class="testimonial-form">
-          <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" name="name" required placeholder="John Doe">
+        <div class="testimonial-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Misheck supports teammates and executes tasks with speed and quality. His collaboration made our project outcomes stronger.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">BW</div>
+            <div class="author-info">
+              <h4>Brian Wasike</h4>
+              <p>Project Collaborator</p>
+            </div>
           </div>
-          
-          <div class="form-group">
-            <label for="role">Your Role/Title *</label>
-            <input type="text" id="role" name="role" required placeholder="e.g., Software Engineer, Project Manager">
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Misheck taught me graphic design fundamentals with patience and practical guidance that immediately improved my design confidence.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PM</div>
+            <div class="author-info">
+              <h4>Precious Main</h4>
+              <p>Graphic Design Mentee</p>
+            </div>
           </div>
-          
-          <div class="form-group">
-            <label for="company">Company/Organization</label>
-            <input type="text" id="company" name="company" placeholder="e.g., Tech Corp, University Name">
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">As a mentor, Misheck is structured, patient, and clear. His guidance in graphic design helped me build practical skills quickly.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PW</div>
+            <div class="author-info">
+              <h4>Patience Mwende</h4>
+              <p>Graphic Design Mentee</p>
+            </div>
           </div>
-          
-          <div class="form-group">
-            <label for="email">Email (private)</label>
-            <input type="email" id="email" name="email" placeholder="your.email@example.com">
-          </div>
-          
-          <div class="form-group">
-            <label for="rating">Rating *</label>
-            <select id="rating" name="rating" required>
-              <option value="">Select a rating</option>
-              <option value="5">5 Stars - Excellent</option>
-              <option value="4">4 Stars - Very Good</option>
-              <option value="3">3 Stars - Good</option>
-              <option value="2">2 Stars - Fair</option>
-              <option value="1">1 Star - Poor</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="testimonial">Your Testimonial *</label>
-            <textarea id="testimonial" name="testimonial" required placeholder="Share your experience working with Misheck..."></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <span id="btnText">Submit Testimonial</span>
-          </button>
-          
-          <div class="success-message" id="successMessage">
-            <i class="fas fa-check-circle"></i> Thank you! Your testimonial has been submitted successfully.
-          </div>
-          
-          <div class="error-message" id="errorMessage">
-            <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again.
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="main-footer">
     <p>&copy; 2026 Misheck Onduso. All Rights Reserved.</p>
-    <p>Designed by <strong>Midian Tech Ltd.</strong></p>
+    <p>Designed by <strong><a href="https://www.midian.site" target="_blank" rel="noopener noreferrer">Midian Creative Technologies</a></strong></p>
   </footer>
 
   <script>
@@ -576,73 +249,6 @@
     const navLinks = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
-    });
-
-    // Testimonial form handling
-    const testimonialForm = document.getElementById('testimonialForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
-
-    testimonialForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      // Disable button and show loading state
-      submitBtn.disabled = true;
-      btnText.textContent = 'Submitting...';
-      successMessage.style.display = 'none';
-      errorMessage.style.display = 'none';
-      
-      const formData = new FormData(testimonialForm);
-      const data = Object.fromEntries(formData);
-      
-      try {
-        // Simulate form submission (replace with actual endpoint)
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        // Show success message
-        successMessage.style.display = 'block';
-        testimonialForm.reset();
-        
-        // Reset button after delay
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          btnText.textContent = 'Submit Testimonial';
-        }, 1000);
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          successMessage.style.display = 'none';
-        }, 5000);
-        
-      } catch (error) {
-        // Show error message
-        errorMessage.style.display = 'block';
-        submitBtn.disabled = false;
-        btnText.textContent = 'Submit Testimonial';
-        
-        // Hide error message after 5 seconds
-        setTimeout(() => {
-          errorMessage.style.display = 'none';
-        }, 5000);
-      }
-    });
-
-    // Form validation
-    const inputs = testimonialForm.querySelectorAll('input, textarea, select');
-    inputs.forEach(input => {
-      input.addEventListener('blur', () => {
-        if (input.hasAttribute('required') && !input.value.trim()) {
-          input.style.borderColor = 'rgba(245, 101, 101, 0.5)';
-        } else {
-          input.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-        }
-      });
-      
-      input.addEventListener('focus', () => {
-        input.style.borderColor = 'white';
-      });
     });
   </script>
   <script src="script.js"></script>

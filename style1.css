@@ -64,6 +64,22 @@ header {
   color: #1e90ff;
 }
 
+.nav-resume-link {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: #ffffff !important;
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(102, 126, 234, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-resume-link:hover {
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
 /* Hero Section */
 .hero-section {
   display: flex;
@@ -421,6 +437,10 @@ footer::before {
 
   .nav-links.show {
     display: flex;
+  }
+
+  .nav-resume-link {
+    width: fit-content;
   }
 }
 
