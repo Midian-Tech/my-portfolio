@@ -40,9 +40,10 @@
     }
 
     .contact-panel {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
       padding: 2rem;
     }
 
@@ -85,19 +86,19 @@
       color: #475569;
     }
 
-    .social-links-title {
+    .contact-social-title {
       font-size: 1.2rem;
       color: #1a1a2e;
-      margin: 1.2rem 0 0.8rem;
+      margin: 1.4rem 0 0.8rem;
     }
 
-    .social-links-grid {
-      display: flex;
-      flex-wrap: wrap;
+    .contact-social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 10px;
     }
 
-    .social-link {
+    .contact-social-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -111,27 +112,27 @@
       transition: all 0.2s ease;
     }
 
-    .social-link i {
+    .contact-social-link i {
       width: 18px;
       text-align: center;
       font-size: 1rem;
     }
 
-    .social-link:hover {
+    .contact-social-link:hover {
       transform: translateY(-2px);
       color: #fff;
       background: linear-gradient(45deg, #667eea, #764ba2);
       border-color: transparent;
     }
 
-    .quick-actions {
+    .contact-cta-actions {
       margin-top: 1.2rem;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .quick-btn {
+    .contact-cta-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -142,12 +143,17 @@
       color: #fff;
     }
 
-    .quick-btn.email-btn {
+    .contact-cta-btn.email-btn {
       background: linear-gradient(45deg, #667eea, #764ba2);
     }
 
-    .quick-btn.whatsapp-btn {
+    .contact-cta-btn.whatsapp-btn {
       background: linear-gradient(45deg, #25d366, #128c7e);
+    }
+
+    .contact-cta-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
     }
 
     .availability-section {
@@ -219,22 +225,22 @@
           </div>
         </div>
 
-        <h3 class="social-links-title">Connect on Social Media</h3>
-        <div class="social-links-grid">
-          <a href="https://github.com/Midian-Tech" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/misheck-onduso-6ab358271/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="mailto:midiantech59@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
-          <a href="https://wa.me/254758605644?text=Misheck%20I%20am%20impressed%20by%20your%20work%20and%20would%20love%20to%20connect." target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a href="tel:+254758605644" class="social-link"><i class="fas fa-phone"></i> Call</a>
+        <h3 class="contact-social-title">Connect on Social Media</h3>
+        <div class="contact-social-grid">
+          <a href="https://github.com/Midian-Tech" target="_blank" rel="noopener noreferrer" class="contact-social-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/misheck-onduso-6ab358271/" target="_blank" rel="noopener noreferrer" class="contact-social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="mailto:midiantech59@gmail.com" class="contact-social-link"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://wa.me/254758605644?text=Misheck%20I%20am%20impressed%20by%20your%20work%20and%20would%20love%20to%20connect." target="_blank" rel="noopener noreferrer" class="contact-social-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+254758605644" class="contact-social-link"><i class="fas fa-phone"></i> Call</a>
         </div>
 
-        <h3 class="social-links-title">Contact Me Directly</h3>
-        <div class="quick-actions">
-          <a href="mailto:midiantech59@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Misheck%2C%20I%20am%20impressed%20by%20your%20work%20and%20would%20love%20to%20connect." class="quick-btn email-btn">
+        <h3 class="contact-social-title">Contact Me Directly</h3>
+        <div class="contact-cta-actions">
+          <a href="mailto:midiantech59@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Misheck%2C%20I%20am%20impressed%20by%20your%20work%20and%20would%20love%20to%20connect." class="contact-cta-btn email-btn">
             <i class="fas fa-envelope"></i>
             Email Me
           </a>
-          <a href="https://wa.me/254758605644?text=Misheck%20I%20am%20impressed%20by%20your%20work%20and%20would%20love%20to%20connect." target="_blank" rel="noopener noreferrer" class="quick-btn whatsapp-btn">
+          <a href="https://wa.me/254758605644?text=Misheck%20I%20am%20impressed%20by%20your%20work%20and%20would%20love%20to%20connect." target="_blank" rel="noopener noreferrer" class="contact-cta-btn whatsapp-btn">
             <i class="fab fa-whatsapp"></i>
             WhatsApp Me
           </a>
